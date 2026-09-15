@@ -77,7 +77,16 @@ namespace AplikasiDataSiswa
             Console.WriteLine();
             MataPelajaran.Absensi.Juni();
             Console.WriteLine();
-            MataPelajaran.Absensi.Juli();
+            MataPelajaran.Absensi.Agustus();
+            Console.WriteLine();
+            MataPelajaran.Absensi.September();
+            Console.WriteLine();
+            MataPelajaran.Absensi.Oktober();
+            Console.WriteLine();
+            MataPelajaran.Absensi.November();
+            Console.WriteLine();
+            MataPelajaran.Absensi.Desember();
+
         }
     }
 
@@ -142,7 +151,7 @@ namespace AplikasiDataSiswa
                 Console.WriteLine("JANUARI :");
                 Console.WriteLine("Masuk : 22");
                 Console.WriteLine("Izin  : 0");
-                Console.WriteLine("Sakit : 0");
+                Console.WriteLine("Sakit : 1");
                 Console.WriteLine("Alpha : 0");
             }
             public static void Februari()
@@ -182,14 +191,59 @@ namespace AplikasiDataSiswa
                 Console.WriteLine("JUNI :");
                 Console.WriteLine("Masuk : 22");
                 Console.WriteLine("Izin  : 0");
-                Console.WriteLine("Sakit : 0");
+                Console.WriteLine("Sakit : 2");
                 Console.WriteLine("Alpha : 0");
             }
             public static void Juli()
             {
                 Console.WriteLine("JULI :");
                 Console.WriteLine("Masuk : 23");
+                Console.WriteLine("Izin  : 1");
+                Console.WriteLine("Sakit : 0");
+                Console.WriteLine("Alpha : 0");
+            }
+
+            public static void Agustus()
+            {
+                Console.WriteLine("AGUSTUS :");
+                Console.WriteLine("Masuk : 23");
                 Console.WriteLine("Izin  : 0");
+                Console.WriteLine("Sakit : 1");
+                Console.WriteLine("Alpha : 0");
+            }
+
+            public static void September()
+            {
+                Console.WriteLine("SEPTEMBER :");
+                Console.WriteLine("Masuk : 20");
+                Console.WriteLine("Izin  : 1");
+                Console.WriteLine("Sakit : 1");
+                Console.WriteLine("Alpha : 0");
+            }
+
+            public static void Oktober()
+            {
+                Console.WriteLine("OKTOBER :");
+                Console.WriteLine("Masuk : 23");
+                Console.WriteLine("Izin  : 1");
+                Console.WriteLine("Sakit : 0");
+                Console.WriteLine("Alpha : 0");
+            }
+
+            public static void November()
+            {
+                Console.WriteLine("NOVEMBER :");
+                Console.WriteLine("Masuk : 23");
+                Console.WriteLine("Izin  : 1");
+                Console.WriteLine("Sakit : 2");
+                Console.WriteLine("Alpha : 0");
+            }
+
+            public static void Desember()
+            {
+                Console.WriteLine("DESEMBER :");
+                Console.WriteLine("Masuk : 23");
+                Console.WriteLine("Izin  : 1");
                 Console.WriteLine("Sakit : 0");
                 Console.WriteLine("Alpha : 0");
             }
