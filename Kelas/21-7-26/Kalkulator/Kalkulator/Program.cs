@@ -5,7 +5,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        MenuApp app = new MenuApp();
-        app.TampilkanMenuUtama();
+        zodiak z = new zodiak();
+        z.TampilkanMenu();
     }
 }

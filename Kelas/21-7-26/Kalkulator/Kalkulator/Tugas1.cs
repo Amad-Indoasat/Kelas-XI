@@ -4,17 +4,21 @@ namespace tugas1
 {
     public class MenuApp
     {
-        private kalkulator calc = new kalkulator();
-        private bangunDatar bd = new bangunDatar();
-        private bangunRuang br = new bangunRuang();
-        private zodiak zodiak = new zodiak();
+        public kalkulator calc = new kalkulator();
+        public bangunDatar bd = new bangunDatar();
+        public bangunRuang br = new bangunRuang();
+        public zodiak zodiak = new zodiak();
+
         public void TampilkanMenuUtama()
         {
             bool loop = true;
 
             while (loop)
             {
-                Console.WriteLine("\n=== APLIKASI TUGAS ===");
+                // Clears the console window before rendering the menu again
+                Console.Clear();
+
+                Console.WriteLine("=== APLIKASI TUGAS ===");
                 Console.WriteLine("Pilih Menu Utama:");
                 Console.WriteLine("1. Kalkulator");
                 Console.WriteLine("2. Bangun Datar");
@@ -42,7 +46,7 @@ namespace tugas1
                         break;
                     case "5":
                         Console.WriteLine("Terima kasih telah menggunakan aplikasi ini!");
-                        loop = false; 
+                        loop = false;
                         break;
                     default:
                         Console.WriteLine("Pilihan tidak valid!");
@@ -57,7 +61,7 @@ namespace tugas1
             }
         }
 
-        private void MenuKalkulator()
+        public void MenuKalkulator()
         {
             Console.WriteLine("[ MENU KALKULATOR ]");
             Console.WriteLine("1. Tambah\n2. Kurang\n3. Kali\n4. Bagi");
@@ -87,7 +91,7 @@ namespace tugas1
             }
         }
 
-        private void MenuBangunDatar()
+        public void MenuBangunDatar()
         {
             Console.WriteLine("[ MENU BANGUN DATAR ]");
             Console.WriteLine("1. Luas Persegi\n2. Luas Persegi Panjang\n3. Luas Lingkaran");
@@ -119,7 +123,7 @@ namespace tugas1
             }
         }
 
-        private void MenuBangunRuang()
+        public void MenuBangunRuang()
         {
             Console.WriteLine("[ MENU BANGUN RUANG ]");
             Console.WriteLine("1. Volume Kubus\n2. Volume Balok\n3. Volume Tabung");
@@ -155,7 +159,7 @@ namespace tugas1
             }
         }
 
-        private void MenuZodiak()
+        public void MenuZodiak()
         {
             Console.WriteLine("[ MENU RAMALAN ZODIAK ]");
             Console.Write("Masukkan Tanggal Lahir (1-31): ");
@@ -172,6 +176,7 @@ namespace tugas1
             Console.WriteLine("==============================");
         }
     }
+
     public class kalkulator
     {
         public double Tambah(double a, double b) => a + b;
@@ -205,6 +210,26 @@ namespace tugas1
 
     public class zodiak
     {
+        // Method baru untuk menangani input/output menu zodiak
+        public void TampilkanMenu()
+        {
+            Console.Clear();
+            Console.WriteLine("[ MENU RAMALAN ZODIAK ]");
+            Console.Write("Masukkan Tanggal Lahir (1-31): ");
+            int tanggal = Convert.ToInt32(Console.ReadLine());
+
+            Console.Write("Masukkan Bulan Lahir (1-12): ");
+            int bulan = Convert.ToInt32(Console.ReadLine());
+
+            var hasil = CekZodiak(tanggal, bulan);
+
+            Console.WriteLine("\n==============================");
+            Console.WriteLine($"Zodiak Kamu : {hasil.NamaZodiak}");
+            Console.WriteLine($"Ramalan     : {hasil.Ramalan}");
+            Console.WriteLine("==============================");
+        }
+
+        // Method logika pengecekan zodiak
         public (string NamaZodiak, string Ramalan) CekZodiak(int tanggal, int bulan)
         {
             if ((bulan == 3 && tanggal >= 21) || (bulan == 4 && tanggal <= 19))
@@ -236,3 +261,4 @@ namespace tugas1
         }
     }
 }
+
